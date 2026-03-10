@@ -3,68 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Recommendation Engine</title>
+    <title>Automotive Concierge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🚗 Car Recommendation Engine</h1>
-            <p>Find your perfect car based on your lifestyle and budget</p>
+        <header class="luxury-header">
+            <div class="header-accent-top"></div>
+            <div class="header-content">
+                <h1>Automotive Concierge</h1>
+                <p class="tagline">Discover Your Perfect Automobile</p>
+                <p class="subtitle">Premium vehicle selection tailored to your lifestyle</p>
+            </div>
+            <div class="header-accent-bottom"></div>
         </header>
 
         <main>
-            <form id="carForm">
-                <div class="form-group">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" min="18" max="120" required>
+            <form id="carForm" class="luxury-form">
+                <div class="form-header">
+                    <h2>Your Preferences</h2>
+                    <p>Let us understand your needs to curate the finest selection</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="income">Annual Income:</label>
-                    <select id="income" name="income" required>
-                        <option value="">Select Income Range</option>
-                        <option value="low">Under $30K</option>
-                        <option value="mid">$30K - $75K</option>
-                        <option value="high">$75K - $150K</option>
-                        <option value="luxury">$150K+</option>
-                    </select>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="120" placeholder="Your age" required>
+                        <div class="input-underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="income">Annual Income Range</label>
+                        <select id="income" name="income" required>
+                            <option value="">Select Income Range</option>
+                            <option value="low">Under $30K</option>
+                            <option value="mid">$30K - $75K</option>
+                            <option value="high">$75K - $150K</option>
+                            <option value="luxury">$150K+</option>
+                        </select>
+                        <div class="input-underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="familySize">Family Size</label>
+                        <select id="familySize" name="familySize" required>
+                            <option value="">Select Family Size</option>
+                            <option value="1">1 Person (Solo)</option>
+                            <option value="2">2 People (Couple)</option>
+                            <option value="3-4">3-4 People (Small Family)</option>
+                            <option value="5+">5+ People (Large Family)</option>
+                        </select>
+                        <div class="input-underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="useCase">Primary Use Case</label>
+                        <select id="useCase" name="useCase" required>
+                            <option value="">Select Primary Use</option>
+                            <option value="commute">Daily Commute</option>
+                            <option value="family">Family Transportation</option>
+                            <option value="offroad">Off-Road/Adventure</option>
+                            <option value="luxury">Luxury & Comfort</option>
+                            <option value="work">Work/Cargo</option>
+                        </select>
+                        <div class="input-underline"></div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="familySize">Family Size:</label>
-                    <select id="familySize" name="familySize" required>
-                        <option value="">Select Family Size</option>
-                        <option value="1">1 Person (Solo)</option>
-                        <option value="2">2 People (Couple)</option>
-                        <option value="3-4">3-4 People (Small Family)</option>
-                        <option value="5+">5+ People (Large Family)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="useCase">Primary Use Case:</label>
-                    <select id="useCase" name="useCase" required>
-                        <option value="">Select Primary Use</option>
-                        <option value="commute">Daily Commute</option>
-                        <option value="family">Family Transportation</option>
-                        <option value="offroad">Off-Road/Adventure</option>
-                        <option value="luxury">Luxury & Comfort</option>
-                        <option value="work">Work/Cargo</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn-submit">Get Recommendations</button>
+                <button type="submit" class="btn-submit">Discover Your Matches</button>
             </form>
 
             <div id="results" class="results hidden">
-                <h2>Recommended Cars for You</h2>
+                <div class="results-header">
+                    <h2>Your Curated Selection</h2>
+                    <p>Vehicles handpicked for your unique profile</p>
+                </div>
                 <div id="recommendations" class="recommendations-grid"></div>
             </div>
         </main>
 
-        <footer>
-            <p>&copy; 2024 Car Recommendation Engine. Made with ❤️</p>
+        <footer class="luxury-footer">
+            <div class="footer-divider"></div>
+            <p>&copy; 2024 Automotive Concierge. Excellence in Selection.</p>
         </footer>
     </div>
 
